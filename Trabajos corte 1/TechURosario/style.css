@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+
+  background-image: url("fondo.png");
+  background-repeat: repeat;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+main {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
