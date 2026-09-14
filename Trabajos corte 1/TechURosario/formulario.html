@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+        <body style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://www.shutterstock.com/image-vector/blue-adn-white-color-background-260nw-2758157769.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100vh;"></body>>
+        <h 1 style="color: white; font-size: 48px; text-shadow: 2px 2px 6px rgba(0,0,0,0.8);"> Contact form </h 1> 
+        <P style="color: white; font-size: 20px; text-shadow: 1px 1px 4px rgba(0,0,0,0.8);">Please fill in your information and we'll be sending you order in no time</P>
+    <form action="https://formspree.io/f/mnqvydqv" method="POST" oninput="noRobot.setCustomValidity(noRobot.checked ? '' : 'Debes confirmar que no eres un robot')">
+
+
+
+        <label for="nombre" margin-bottom:6px; style="color: #ccc;">Your name</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="First Name" style="width: 180px; margin-right: 20px;">
+        <input type="text" id="apellido" name="apellido" required placeholder="Last Name" style="width: 180px;">
+        <br><br>
+
+
+
+        <label for="email" style="color: #ccc;">Your Email</label>
+        <input type="email" id="email" name="email" required placeholder="e.g hello@contact.net"><br><br>
+        <label for="telefono" style="color: #ccc;">Your Phone</label>
+        <input type="tel" id="telefono" name="telefono" required placeholder="###" >
+        <input type="tel" id="telefono" name="telefono" required placeholder="###" >
+        <input type="tel" id="telefono" name="telefono" required placeholder="###" >
+        <br><br>
+        <label for="message subject" style="color: #ccc;">Message subject</label>
+        <select id="message subject" name="message subject" required>
+            <option value="">Other</option>
+            <option value="general inquiry">General Inquiry</option>
+            <option value="product support">Product Support</option>
+            <option value="billing">Billing</option>
+        </select>
+        <br><br>
+        <label for="mensaje" style="color: #ccc;">Message:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+
+
+
+        <laber for="verification" style="color: #ccc;">Verification</laber>
+        <div class="captcha-box" id="codigoCaptcha" style="display:flex; align-items:center; gap:10px; background:white; border:1px solid #ccc; border-radius:4px; padding:10px; width:260px;">
+            <input type="checkbox" id="noRobot" name="noRobot" required oninvalid="this.setCustomValidity('Debes confirmar que no eres un robot')" onchange="this.setCustomValidity('')">
+            <label for="noRobot" style="margin:0;">No soy un robot</label>
+            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/RecaptchaLogo.svg/250px-RecaptchaLogo.svg.png?utm_source=es.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="reCAPTCHA" width="32" height="32">
+        </div>
+        
+
+
+
+        <input type="submit" value="Submit Form">
+    </form>
+</body>
+</html>

@@ -104,5 +104,64 @@
             <td>Informe</td>
         </tr>
     </table </body>
-
+    <br>
+    <form action="" method="post" autocomplete="off" novalidate>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+        <label for="contraseña">Password:</label>
+        <input type="password" id="contraseña" name="contraseña" required>
+        <label for="genero">Género:</label>
+        <select id="genero" name="genero" required>
+            <option value="">Seleccione</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>  
+        </select>
+        <label for="genero">Género: </label>
+        <input type="radio" id="masculino" name="genero" value="masculino" required>
+        <label for="masculino">Masculino</label>
+        <label for="femenino">Femenino</label>
+        <label for="intereses">Intereses:</label>
+        <input type="checkbox" id="deportes" name="intereses" value="deportes">
+        <label for="deportes">Deportes</label>
+        <input type="checkbox" id="musica" name="intereses" value="musica">
+        <label for="musica">Música</label>              
+        <input type="checkbox" id="viajes" name="intereses" value="viajes">
+        <label for="viajes">Viajes</label>
+        <label for="pais">País:</label>
+        <select id="pais" name="pais" required>
+            <option value="">Seleccione</option>
+            <option value="0">Colombia</option>
+            <option value="1">México</option>
+            <option value="2">Argentina</option>
+        </select>
+        <label for="ciudad">Ciudad:</label>
+        <select id="ciudad" name="ciudad" required>
+            <option value="">Seleccione</option>
+            <optgroup
+                    label="Colombia">
+                    <option value="0">Bogotá</option>
+                    <option value="1">Medellín</option>
+                    <option value="2">Cali</option>
+            </optgroup>
+            <optgroup label="México">
+                    <option value="3">Ciudad de México</option>
+                    <option value="4">Guadalajara</option>
+                    <option value="5">Monterrey</option>
+            </optgroup>
+            <optgroup label="Argentina">
+                    <option value="6">Buenos Aires</option>
+                    <option value="7">Córdoba</option>
+                    <option value="8">Rosario</option>  
+            </optgroup>
+        </select>
+        <input type="hidden" name="token" value="1234567890">
+        <label for="archivo" >Archivo:</label>
+        <input type="file" id="archivo" name="archivo" accept=".jpg,.jpeg,.png,.pdf">
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Restablecer">
+    </form>
+</body>
 </html>
