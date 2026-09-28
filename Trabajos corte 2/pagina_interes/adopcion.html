@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adopción — Todo Sobre Gatos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>🐱 Todo Sobre Gatos</h1>
+    <p>Tu guía completa para cuidar a tu felino como se merece</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="alimentacion.html">Alimentación</a>
+    <a href="salud.html">Salud y Cuidados</a>
+    <a href="adopcion.html" class="activo">Adopción</a>
+  </nav>
+
+  <main>
+    <h2>Adoptar un gato responsablemente</h2>
+    <p>
+      Adoptar un gato es una decisión que debe tomarse con calma. Antes de
+      llevarlo a casa, es importante evaluar tu espacio, tu tiempo
+      disponible y tu compromiso a largo plazo, ya que un gato puede vivir
+      entre 12 y 18 años bajo buenos cuidados.
+    </p>
+
+    <figure>
+      <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=700"
+           alt="Gatito siendo sostenido con cuidado por una persona"
+           width="700" height="467">
+      <figcaption>La adopción responsable empieza por informarse antes de decidir.</figcaption>
+    </figure>
+
+    <h3>Antes de adoptar, pregúntate:</h3>
+    <ul>
+      <li>¿Tengo tiempo para dedicarle atención y juego diario?</li>
+      <li>¿Mi hogar es seguro (ventanas, balcones, plantas tóxicas)?</li>
+      <li>¿Puedo cubrir los gastos de alimentación, vacunas y veterinario?</li>
+      <li>¿Todos en casa están de acuerdo y sin alergias?</li>
+    </ul>
+
+    <div class="tip">
+      <strong>Consejo rápido:</strong> Prefiere adoptar en fundaciones o
+      refugios en lugar de comprar; muchos gatos esperan un hogar y ya
+      llegan esterilizados y vacunados.
+    </div>
+
+    <h2>Formulario de interés en adopción</h2>
+    <p class="intro">Completa este formulario si deseas que te contactemos para iniciar el proceso de adopción.</p>
+
+    <!-- ============================================================
+         FORMULARIO DE INTERÉS EN ADOPCIÓN
+         ============================================================ -->
+    <form action="procesar-adopcion.php" method="post" enctype="multipart/form-data">
+
+      <!-- ========================================================
+           BLOQUE 1 — DATOS PERSONALES
+           ======================================================== -->
+      <fieldset>
+        <legend>1. Datos personales</legend>
+
+        <label for="nombre">Nombre completo *</label>
+        <input type="text" id="nombre" name="nombre"
+               placeholder="Ana María Restrepo"
+               minlength="5" maxlength="60"
+               autocomplete="name" required>
+
+        <label for="correo">Correo electrónico *</label>
+        <input type="email" id="correo" name="correo"
+               placeholder="ana.restrepo@correo.com"
+               autocomplete="email" required>
+        <small>Debe ser un correo válido.</small>
+
+        <label for="celular">Celular *</label>
+        <input type="tel" id="celular" name="celular"
+               placeholder="3001234567"
+               pattern="[0-9]{10}" title="Debe tener 10 dígitos"
+               maxlength="10" required>
+
+        <label for="nacimiento">Fecha de nacimiento *</label>
+        <input type="date" id="nacimiento" name="nacimiento"
+               max="2012-12-31" required>
+        <small>Debes ser mayor de edad para adoptar.</small>
+      </fieldset>
+
+      <!-- ========================================================
+           BLOQUE 2 — VIVIENDA Y EXPERIENCIA
+           ======================================================== -->
+      <fieldset>
+        <legend>2. Vivienda y experiencia</legend>
+
+        <label for="ciudad">Ciudad de residencia *</label>
+        <select id="ciudad" name="ciudad" required>
+          <option value="" disabled selected>-- Selecciona --</option>
+          <optgroup label="Colombia">
+            <option value="bogota">Bogotá</option>
+            <option value="medellin">Medellín</option>
+            <option value="cali">Cali</option>
+          </optgroup>
+          <optgroup label="Otro país">
+            <option value="mexico">México</option>
+            <option value="argentina">Argentina</option>
+          </optgroup>
+        </select>
+
+        <label>Tipo de vivienda *</label>
+        <div class="inline">
+          <input type="radio" id="vivienda-casa" name="vivienda" value="casa" checked required>
+          <label for="vivienda-casa">Casa</label>
+
+          <input type="radio" id="vivienda-apto" name="vivienda" value="apartamento" required>
+          <label for="vivienda-apto">Apartamento</label>
+
+          <input type="radio" id="vivienda-otro" name="vivienda" value="otro" required>
+          <label for="vivienda-otro">Otro</label>
+        </div>
+
+        <label>¿Ya tienes otras mascotas?</label>
+        <div class="inline">
+          <input type="checkbox" id="mascota-perro" name="mascotas" value="perro">
+          <label for="mascota-perro">Perro</label>
+
+          <input type="checkbox" id="mascota-gato" name="mascotas" value="gato">
+          <label for="mascota-gato">Gato</label>
+
+          <input type="checkbox" id="mascota-otra" name="mascotas" value="otra">
+          <label for="mascota-otra">Otra</label>
+
+          <input type="checkbox" id="mascota-ninguna" name="mascotas" value="ninguna">
+          <label for="mascota-ninguna">Ninguna</label>
+        </div>
+
+        <label for="horas">Horas al día que estarías en casa *</label>
+        <input type="number" id="horas" name="horas"
+               min="1" max="24" step="1" value="8" required>
+      </fieldset>
+
+      <!-- ========================================================
+           BLOQUE 3 — PREFERENCIAS DE ADOPCIÓN
+           ======================================================== -->
+      <fieldset>
+        <legend>3. Preferencias de adopción</legend>
+
+        <label for="edadgato">Edad de gato preferida *</label>
+        <select id="edadgato" name="edadgato" required>
+          <option value="" disabled selected>-- Selecciona --</option>
+          <option value="gatito">Gatito (0-1 año)</option>
+          <option value="adulto">Adulto (1-7 años)</option>
+          <option value="senior">Senior (8+ años)</option>
+          <option value="cualquiera">Cualquiera</option>
+        </select>
+
+        <label for="foto">Foto de tu hogar (opcional)</label>
+        <input type="file" id="foto" name="foto"
+               accept=".jpg,.jpeg,.png">
+
+        <label for="motivacion">¿Por qué quieres adoptar un gato? *</label>
+        <textarea id="motivacion" name="motivacion"
+                  rows="4" maxlength="300"
+                  placeholder="Cuéntanos tu motivación..." required></textarea>
+      </fieldset>
+
+      <!-- ========================================================
+           BLOQUE 4 — CONFIRMACIÓN
+           ======================================================== -->
+      <fieldset>
+        <legend>4. Confirmación</legend>
+
+        <label for="compromiso">
+          <input type="checkbox" id="compromiso" name="compromiso" required>
+          Me comprometo a brindarle cuidado, alimentación y atención veterinaria de por vida *
+        </label>
+      </fieldset>
+
+      <label for="botones">Botones del formulario</label>
+      <button type="submit">Enviar solicitud</button>
+      <button type="reset">Borrar</button>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>Sitio educativo sobre el cuidado de gatos &mdash; Mafe 2026 jiji</p>
+  </footer>
+
+</body>
+</html>
