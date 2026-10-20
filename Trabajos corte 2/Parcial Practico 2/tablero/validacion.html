@@ -1,0 +1,74 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animemonos a aprender</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+ 
+<body>
+  <header>
+    <h1>Animemonos a aprender</h1>
+    <p>Letra de la ronda: <strong>A</strong></p>
+    <p><a href="index.html#reglas">Ir a las reglas del torneo</a></p>
+  </header>
+
+  <main>
+    <h2>Escriba sus respuestas para la ronda</h2>
+ 
+ <form action="#" method="get">
+      <fieldset>
+        <legend>Escriba sus respuestas para la ronda</legend>
+        <p>
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" placeholder="Empieza con A" pattern="[Aa][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="Escriba al menos tres letras y comience con la letra A." required="">
+        </p>
+        <p>
+          <label for="lugar">Lugar</label>
+          <input id="lugar" name="lugar" type="text" placeholder="Empieza con A" pattern="[Aa][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="Escriba al menos tres letras y comience con la letra A." required="">
+        </p>
+        <p>
+          <label for="animal">Animal</label>
+          <input id="animal" name="animal" type="text" placeholder="Empieza con A" pattern="[Aa][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="Escriba al menos tres letras y comience con la letra A." required="">
+        </p>
+        <p>
+          <label for="objeto">Objeto</label>
+          <input id="objeto" name="objeto" type="text" placeholder="Empieza con A" pattern="[Aa][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="Escriba al menos tres letras y comience con la letra A." required="">
+        </p>
+        <p>
+          <label for="marca">Marca</label>
+          <input id="marca" name="marca" type="text" placeholder="Empieza con A" pattern="[Aa][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="Escriba al menos tres letras y comience con la letra A." required="">
+        </p>
+        <p>
+          <label for="comida">Comida</label>
+          <input id="comida" name="comida" type="text" placeholder="Empieza con A" pattern="[Aa][A-Za-zÁÉÍÓÚáéíóúÑñ]{2,}" title="Escriba al menos tres letras y comience con la letra A." required="">
+        </p>
+      </fieldset>
+
+      <p>
+        <label for="letra">Letra de la ronda</label>
+        <select id="letra" name="letra">
+          <option value="A" selected="">A</option>
+          
+        </select>
+      </p>
+      <p>
+        <label for="ronda">Número de ronda</label>
+        <input id="ronda" name="ronda" type="number" min="1" max="13" value="1">
+      </p>
+
+      <p>
+        <label for="timbre">Sonido del timbre</label>
+        <audio id="timbre" controls="">
+          <source src="recursos/timbre.mp3" type="audio/mpeg">
+          Su navegador no admite audio HTML5.
+        </audio>
+      </p>
+      <p>
+        <img src="recursos/escudo.png" alt="Escudo del torneo Animemonos a aprender">
+      </p>
+
+      <button type="submit">¡STOP!</button>
+      <button type="reset">Limpiar respuestas</button>
+    </form>

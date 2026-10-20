@@ -1,0 +1,57 @@
+/*
+  Paleta del torneo:
+  Azul principal (#112A46): color principal del torneo.
+  Dorado (#E0A458): color de acento.
+  Gris claro (#F3F6FA): color de fondo.
+  Tinta (#1D2B3A): texto principal.
+  Gris pizarra (#526579): texto secundario.
+*/
+:root {
+  --color-principal: #112A46;
+  --color-acento: #E0A458;
+  --color-fondo: #F3F6FA;
+  --color-texto: #1D2B3A;
+  --color-texto-secundario: #526579;
+  --radio: 0.5rem;
+  --fuente-titulos: "Trebuchet MS", "Segoe UI", sans-serif;
+  --fuente-cuerpo: "Segoe UI", Arial, sans-serif;
+  --tamano-cuerpo: 1rem;
+  --tamano-h3: 1.25rem;
+  --tamano-h2: 1.5rem;
+  --tamano-h1: 2rem;
+}
+
+body {
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--tamano-cuerpo);
+
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fuente-titulos);
+  
+}
+
+h1 {
+  font-size: var(--tamano-h1);
+}
+
+h2 {
+  font-size: var(--tamano-h2);
+}
+
+h3 {
+  font-size: var(--tamano-h3);
+}
+
+table,
+th,
+td {
+  border: 1px solid var(--color-principal);
+}
+
+table {
+  border-collapse: collapse;
+}
