@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 3000;
 
 const server = app.listen(PORT, () => {
   console.log(`API tareas en http://localhost:${PORT}/api/tareas`);
+  console.log(`Documentacion en http://localhost:${PORT}/api/docs`);
 });
 
 module.exports = server;
